@@ -48,9 +48,9 @@ masterButton.addEventListener('click', () => {
 
 //Update Progress bar as the song plays
 audioElement.addEventListener('timeupdate', () => {  //Prevents jumps when duration is not ready
-    if(audioElement.duration && !NaN(audioElement.duration)){
-    let progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
-    progressBar.value = progress;
+    if (audioElement.duration && !isNaN(audioElement.duration)) {
+        let progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
+        progressBar.value = progress;
     }
 });
 
